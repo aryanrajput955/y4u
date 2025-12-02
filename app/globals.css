@@ -1,26 +1,125 @@
 @import "tailwindcss";
+@custom-variant dark (&:is(.dark *));
+
+/* ---------------------------------------
+   COLOR SYSTEM BASED ON YOUR LOGO
+---------------------------------------- */
 
 :root {
+  /* Light Background System */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1a1a1a;
+
+  --card: #ffffff;
+  --card-foreground: #1a1a1a;
+
+  --popover: #ffffff;
+  --popover-foreground: #1a1a1a;
+
+  /* Brand Colors (From Logo) */
+  --primary: #3AA6D0; /* Blue */
+  --primary-foreground: #ffffff;
+
+  --secondary: #E7A921; /* Gold */
+  --secondary-foreground: #1a1a1a;
+
+  /* Accents & Muted */
+  --accent: #8BD8E0; /* Aqua Light */
+  --accent-foreground: #1a1a1a;
+
+  --muted: #F1F5F9;
+  --muted-foreground: #475569;
+
+  --border: #E5E7EB;
+  --input: #E2E8F0;
+  --ring: var(--primary);
+
+  --radius: 0.75rem;
+
+  /* Charts (Soft Matching Colors) */
+  --chart-1: #3AA6D0;
+  --chart-2: #E7A921;
+  --chart-3: #8BD8E0;
+  --chart-4: #4CA4AF;
+  --chart-5: #1E81A8;
+
+  /* Sidebar */
+  --sidebar: #ffffff;
+  --sidebar-foreground: #1a1a1a;
+  --sidebar-primary: #3AA6D0;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #E7A921;
+  --sidebar-accent-foreground: #1a1a1a;
+  --sidebar-border: #E5E7EB;
+  --sidebar-ring: #3AA6D0;
 }
+
+/* ---------------------------------------
+   BASE STYLES
+---------------------------------------- */
 
 @theme inline {
+  --font-sans: "Inter", sans-serif;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    border-color: theme(colors.border);
+  }
+  body {
+    background-color: theme(colors.background);
+    color: theme(colors.foreground);
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ---------------------------------------
+   LIGHT SOFT GRID & DOT PATTERNS
+---------------------------------------- */
+
+.grid-pattern {
+  background-image: linear-gradient(to right, rgba(58, 166, 208, 0.12) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(58, 166, 208, 0.12) 1px, transparent 1px);
+  background-size: 60px 60px;
 }
+
+.dot-pattern {
+  background-image: radial-gradient(circle, rgba(58, 166, 208, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* ---------------------------------------
+   ANIMATIONS
+---------------------------------------- */
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up { animation: fade-in-up 0.6s ease-out forwards; }
+.animation-delay-200 { animation-delay: 0.2s; opacity: 0; }
+.animation-delay-400 { animation-delay: 0.4s; opacity: 0; }
+.animation-delay-600 { animation-delay: 0.6s; opacity: 0; }
