@@ -2,6 +2,7 @@
 
 import React, {useState, useEffect} from 'react'
 import {ChevronLeft, ChevronRight} from 'lucide-react'
+import Image from 'next/image'
 
 export default function SliderSection() {
 	const [currentSlide, setCurrentSlide] = useState(0)
@@ -42,7 +43,7 @@ export default function SliderSection() {
 			setCurrentSlide((prev) => (prev + 1) % slides.length)
 		}, 5000)
 		return () => clearInterval(timer)
-	}, [slides.length])
+	}, [])
 
 	const goToSlide = (index) => {
 		setCurrentSlide(index)
@@ -57,30 +58,32 @@ export default function SliderSection() {
 	}
 
 	return (
-		<div className='relative w-full h-[600px] overflow-hidden bg-gray-900'>
+		<div className='relative w-full h-[600px] overflow-hidden bg-background'>
 			{slides.map((slide, index) => (
 				<div
 					key={index}
 					className={`absolute inset-0 transition-opacity duration-1000 ${
 						index === currentSlide ? 'opacity-100' : 'opacity-0'
 					}`}>
-					<img
+					<Image
 						src={slide.image}
 						alt={slide.title}
-						className='w-full h-full object-cover'
+						fill
+						className='object-cover'
+						priority={index === 0}
 					/>
 					<div className='absolute inset-0 bg-linear-to-r from-black/70 via-black/50 to-transparent' />
 
 					<div className='absolute inset-0 flex items-center'>
 						<div className='max-w-7xl mx-auto px-6 w-full'>
 							<div className='max-w-2xl'>
-								<h1 className='text-5xl md:text-6xl font-bold text-white mb-4 animate-fade-in'>
+								<h1 className='text-5xl md:text-6xl font-bold text-white mb-4'>
 									{slide.title}
 								</h1>
-								<p className='text-xl md:text-2xl text-gray-200 mb-8 animate-fade-in-delay'>
+								<p className='text-xl md:text-2xl text-gray-200 mb-8'>
 									{slide.subtitle}
 								</p>
-								<button className='bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-full font-semibold transition-all hover:scale-105 animate-fade-in-delay-2'>
+								<button className='bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-full font-semibold transition-all hover:scale-105'>
 									{slide.cta}
 								</button>
 							</div>
@@ -115,31 +118,6 @@ export default function SliderSection() {
 					/>
 				))}
 			</div>
-
-			<style jsx>{`
-				@keyframes fade-in {
-					from {
-						opacity: 0;
-						transform: translateY(20px);
-					}
-					to {
-						opacity: 1;
-						transform: translateY(0);
-					}
-				}
-
-				.animate-fade-in {
-					animation: fade-in 0.8s ease-out;
-				}
-
-				.animate-fade-in-delay {
-					animation: fade-in 0.8s ease-out 0.2s both;
-				}
-
-				.animate-fade-in-delay-2 {
-					animation: fade-in 0.8s ease-out 0.4s both;
-				}
-			`}</style>
 		</div>
 	)
 }

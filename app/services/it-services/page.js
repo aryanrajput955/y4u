@@ -6,7 +6,7 @@ export default function ITServicesPage() {
 	return (
 		<main className='min-h-screen bg-background'>
 			{/* Hero Section */}
-			<section className='relative h-[400px] bg-gradient-to-r from-primary to-accent'>
+			<section className='relative h-[400px] bg-linear-to-r from-primary to-accent'>
 				<div className='absolute inset-0 bg-black/40' />
 				<div className='relative max-w-7xl mx-auto px-6 h-full flex flex-col justify-center'>
 					<Link
@@ -31,47 +31,47 @@ export default function ITServicesPage() {
 						{/* Main Content */}
 						<div className='lg:col-span-2'>
 							<h2 className='text-3xl font-bold text-foreground mb-6'>
-								About This Service
+								About This Training Program
 							</h2>
 							<p className='text-muted-foreground mb-6 leading-relaxed'>
-								From custom websites to mobile apps, we deliver cutting-edge
-								technology solutions that drive growth and engagement. Our
-								expert team transforms your digital vision into reality.
-							</p>
-
+								Master modern web development, mobile app creation, and digital
+								technologies through our comprehensive IT training programs.
+								Learn from industry experts and work on real-world projects to
+								build a portfolio that gets you hired.
+							</p>{' '}
 							<h3 className='text-2xl font-bold text-foreground mb-4 mt-8'>
-								Key Features
+								Skills You'll Master
 							</h3>
 							<div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-8'>
 								{[
-									'Web Development',
-									'UI/UX Design',
-									'Mobile App Dev',
-									'E-commerce Development',
-									'Cloud Solutions',
-									'Digital Marketing',
-									'SEO Optimization',
-									'Maintenance & Support',
+									'Web Development (HTML, CSS, JavaScript)',
+									'UI/UX Design Principles',
+									'Mobile App Development',
+									'E-commerce Platforms',
+									'Cloud Computing Basics',
+									'Digital Marketing Strategies',
+									'SEO & Analytics',
+									'Version Control (Git)',
 								].map((feature, idx) => (
 									<div
 										key={idx}
 										className='flex items-start gap-3'>
 										<CheckCircle2
-											className='text-primary mt-1 flex-shrink-0'
+											className='text-primary mt-1 shrink-0'
 											size={20}
 										/>
 										<span className='text-foreground'>{feature}</span>
 									</div>
 								))}
 							</div>
-
 							<h3 className='text-2xl font-bold text-foreground mb-4 mt-8'>
-								Our Technology Stack
+								Technologies You'll Learn
 							</h3>
 							<p className='text-muted-foreground mb-4 leading-relaxed'>
-								We use the latest technologies and frameworks to build scalable,
-								secure, and high-performance applications. Our solutions are
-								tailored to meet your specific business requirements.
+								Get trained in the latest technologies and frameworks used by
+								top companies worldwide. Through hands-on projects and
+								mentorship, you'll build real applications and gain the
+								confidence to start your IT career or freelance business.
 							</p>
 						</div>
 

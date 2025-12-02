@@ -6,7 +6,7 @@ export default function UttarakhandTourismPage() {
 	return (
 		<main className='min-h-screen bg-background'>
 			{/* Hero Section */}
-			<section className='relative h-[400px] bg-gradient-to-r from-primary to-accent'>
+			<section className='relative h-[400px] bg-linear-to-r from-primary to-accent'>
 				<div className='absolute inset-0 bg-black/40' />
 				<div className='relative max-w-7xl mx-auto px-6 h-full flex flex-col justify-center'>
 					<Link
@@ -16,10 +16,10 @@ export default function UttarakhandTourismPage() {
 						Back to Services
 					</Link>
 					<h1 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4'>
-						Uttarakhand Tourism
+						Uttarakhand Tourism Training
 					</h1>
 					<p className='text-xl text-white/90 max-w-2xl'>
-						Comprehensive hospitality training programs tailored for
+						Learn hospitality and tourism skills to build your career in
 						Uttarakhand's thriving tourism industry
 					</p>
 				</div>
@@ -32,15 +32,15 @@ export default function UttarakhandTourismPage() {
 						{/* Main Content */}
 						<div className='lg:col-span-2'>
 							<h2 className='text-3xl font-bold text-foreground mb-6'>
-								About This Service
+								About This Training Program
 							</h2>
 							<p className='text-muted-foreground mb-6 leading-relaxed'>
-								Train your staff in world-class hotel and resort management
-								practices. Our comprehensive programs are designed specifically
-								for Uttarakhand's unique tourism landscape, ensuring your team
-								delivers exceptional guest experiences.
-							</p>
-
+								Master world-class hotel and resort management skills through
+								our comprehensive training programs. Designed specifically for
+								Uttarakhand's unique tourism landscape, you'll learn everything
+								needed to deliver exceptional guest experiences and build a
+								successful career in hospitality.
+							</p>{' '}
 							<h3 className='text-2xl font-bold text-foreground mb-4 mt-8'>
 								Key Features
 							</h3>
@@ -59,22 +59,22 @@ export default function UttarakhandTourismPage() {
 										key={idx}
 										className='flex items-start gap-3'>
 										<CheckCircle2
-											className='text-primary mt-1 flex-shrink-0'
+											className='text-primary mt-1 shrink-0'
 											size={20}
 										/>
 										<span className='text-foreground'>{feature}</span>
 									</div>
 								))}
 							</div>
-
 							<h3 className='text-2xl font-bold text-foreground mb-4 mt-8'>
 								What You'll Learn
 							</h3>
 							<p className='text-muted-foreground mb-4 leading-relaxed'>
 								Our training program covers all aspects of hospitality
 								management, from basic customer service to advanced hotel
-								operations. You'll gain hands-on experience and
-								industry-recognized certifications.
+								operations. You'll gain hands-on experience through practical
+								sessions, real-world simulations, and industry-recognized
+								certifications that will prepare you for immediate employment.
 							</p>
 						</div>
 

@@ -6,7 +6,7 @@ export default function LabourContractorPage() {
 	return (
 		<main className='min-h-screen bg-background'>
 			{/* Hero Section */}
-			<section className='relative h-[400px] bg-gradient-to-r from-primary to-accent'>
+			<section className='relative h-[400px] bg-linear-to-r from-primary to-accent'>
 				<div className='absolute inset-0 bg-black/40' />
 				<div className='relative max-w-7xl mx-auto px-6 h-full flex flex-col justify-center'>
 					<Link
@@ -16,11 +16,11 @@ export default function LabourContractorPage() {
 						Back to Services
 					</Link>
 					<h1 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4'>
-						Labour Contractor & Staff Manpower
+						Workforce Skill Development
 					</h1>
 					<p className='text-xl text-white/90 max-w-2xl'>
-						Professional recruitment and manpower solutions for industries
-						across sectors
+						Learn professional skills and get job-ready training for skilled,
+						semi-skilled, and technical workforce roles
 					</p>
 				</div>
 			</section>
@@ -32,48 +32,48 @@ export default function LabourContractorPage() {
 						{/* Main Content */}
 						<div className='lg:col-span-2'>
 							<h2 className='text-3xl font-bold text-foreground mb-6'>
-								About This Service
+								About This Training Program
 							</h2>
 							<p className='text-muted-foreground mb-6 leading-relaxed'>
-								We provide skilled, semi-skilled, and unskilled workforce
-								tailored to your business needs. Our comprehensive manpower
-								solutions ensure you have the right talent at the right time.
-							</p>
-
+								Develop the skills employers are looking for with our
+								comprehensive workforce training programs. Whether you're
+								seeking skilled, semi-skilled, or technical roles, we'll equip
+								you with industry-relevant competencies and help you become
+								job-ready with proper certifications.
+							</p>{' '}
 							<h3 className='text-2xl font-bold text-foreground mb-4 mt-8'>
-								Key Features
+								Key Learning Areas
 							</h3>
 							<div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-8'>
 								{[
-									'Skilled Labour Supply',
-									'Background Verification',
-									'Payroll Management',
-									'Compliance Support',
-									'On-site Training',
-									'Performance Monitoring',
-									'Contract Management',
-									'24/7 Support',
+									'Technical Skill Training',
+									'Workplace Safety Standards',
+									'Professional Communication',
+									'Quality Control & Compliance',
+									'Equipment Operation',
+									'Team Collaboration',
+									'Problem Solving Skills',
+									'Industry Certifications',
 								].map((feature, idx) => (
 									<div
 										key={idx}
 										className='flex items-start gap-3'>
 										<CheckCircle2
-											className='text-primary mt-1 flex-shrink-0'
+											className='text-primary mt-1 shrink-0'
 											size={20}
 										/>
 										<span className='text-foreground'>{feature}</span>
 									</div>
 								))}
 							</div>
-
 							<h3 className='text-2xl font-bold text-foreground mb-4 mt-8'>
-								Our Approach
+								Our Training Approach
 							</h3>
 							<p className='text-muted-foreground mb-4 leading-relaxed'>
-								We maintain a vast database of pre-screened, trained
-								professionals ready to meet your staffing requirements. Our
-								streamlined processes ensure quick deployment without
-								compromising on quality.
+								We provide hands-on training with industry experts, focusing on
+								practical skills that employers demand. Our job placement
+								assistance connects you with leading companies, helping you
+								transition from training to employment seamlessly.
 							</p>
 						</div>
 
@@ -105,7 +105,7 @@ export default function LabourContractorPage() {
 										/>
 										<div>
 											<p className='text-sm text-muted-foreground'>
-												Workers Placed
+												Students Trained
 											</p>
 											<p className='font-semibold text-foreground'>1000+</p>
 										</div>

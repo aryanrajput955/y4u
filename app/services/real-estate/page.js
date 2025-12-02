@@ -32,28 +32,28 @@ export default function RealEstatePage() {
 						{/* Main Content */}
 						<div className='lg:col-span-2'>
 							<h2 className='text-3xl font-bold text-foreground mb-6'>
-								About This Service
+								About This Training Program
 							</h2>
 							<p className='text-muted-foreground mb-6 leading-relaxed'>
-								Connect buyers with their dream properties and grow your real
-								estate business with our comprehensive consulting and training
-								services. We provide market analysis, sales training, and
-								complete legal support.
-							</p>
-
+								Learn how to succeed in the real estate industry with our
+								comprehensive training program. Master property valuation, sales
+								techniques, legal documentation, and client relationship
+								management to build a thriving career as a real estate
+								professional.
+							</p>{' '}
 							<h3 className='text-2xl font-bold text-foreground mb-4 mt-8'>
-								Key Features
+								What You'll Learn
 							</h3>
 							<div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-8'>
 								{[
-									'Property Consulting',
-									'Sales Training',
-									'Market Analysis',
-									'Legal Documentation',
-									'Investment Advisory',
-									'Property Valuation',
+									'Property Consulting Skills',
+									'Sales & Negotiation Techniques',
+									'Market Analysis & Research',
+									'Legal Documentation Process',
+									'Investment Advisory Basics',
+									'Property Valuation Methods',
 									'Client Relationship Management',
-									'Digital Marketing for Properties',
+									'Digital Marketing for Real Estate',
 								].map((feature, idx) => (
 									<div
 										key={idx}
@@ -66,15 +66,15 @@ export default function RealEstatePage() {
 									</div>
 								))}
 							</div>
-
 							<h3 className='text-2xl font-bold text-foreground mb-4 mt-8'>
-								Our Expertise
+								Career Opportunities
 							</h3>
 							<p className='text-muted-foreground mb-4 leading-relaxed'>
-								With years of experience in the real estate market, we provide
-								comprehensive services from property listing to closing deals.
-								Our RERA-compliant processes ensure transparency and trust in
-								every transaction.
+								After completing this program, you'll be ready to work as a real
+								estate agent, property consultant, or start your own real estate
+								business. Our training covers RERA-compliant processes, ensuring
+								you understand professional standards and ethical practices in
+								the industry.
 							</p>
 						</div>
 

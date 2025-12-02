@@ -6,7 +6,7 @@ export default function IndustrialTrainingPage() {
 	return (
 		<main className='min-h-screen bg-background'>
 			{/* Hero Section */}
-			<section className='relative h-[400px] bg-gradient-to-r from-primary to-accent'>
+			<section className='relative h-[400px] bg-linear-to-r from-primary to-accent'>
 				<div className='absolute inset-0 bg-black/40' />
 				<div className='relative max-w-7xl mx-auto px-6 h-full flex flex-col justify-center'>
 					<Link
@@ -32,15 +32,15 @@ export default function IndustrialTrainingPage() {
 						{/* Main Content */}
 						<div className='lg:col-span-2'>
 							<h2 className='text-3xl font-bold text-foreground mb-6'>
-								About This Service
+								About This Training Program
 							</h2>
 							<p className='text-muted-foreground mb-6 leading-relaxed'>
-								Prepare your workforce for modern manufacturing with
-								industry-aligned skill development programs. Our training
-								combines theoretical knowledge with practical, hands-on
-								experience.
-							</p>
-
+								Prepare yourself for modern manufacturing careers with our
+								industry-aligned skill development programs. Learn from
+								experienced professionals and gain both theoretical knowledge
+								and practical, hands-on experience on actual industrial
+								equipment.
+							</p>{' '}
 							<h3 className='text-2xl font-bold text-foreground mb-4 mt-8'>
 								Key Features
 							</h3>
@@ -59,22 +59,22 @@ export default function IndustrialTrainingPage() {
 										key={idx}
 										className='flex items-start gap-3'>
 										<CheckCircle2
-											className='text-primary mt-1 flex-shrink-0'
+											className='text-primary mt-1 shrink-0'
 											size={20}
 										/>
 										<span className='text-foreground'>{feature}</span>
 									</div>
 								))}
 							</div>
-
 							<h3 className='text-2xl font-bold text-foreground mb-4 mt-8'>
-								Training Methodology
+								Learning Methodology
 							</h3>
 							<p className='text-muted-foreground mb-4 leading-relaxed'>
-								Our training programs are designed by industry experts and
-								include real-world simulations, factory visits, and hands-on
-								practice with state-of-the-art equipment. Students receive NSDC
-								certification upon completion.
+								Learn through a perfect blend of classroom instruction,
+								real-world simulations, industrial visits, and extensive
+								hands-on practice with state-of-the-art equipment. Upon
+								successful completion, you'll receive NSDC certification that's
+								recognized across industries nationwide.
 							</p>
 						</div>
 
