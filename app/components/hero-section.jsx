@@ -15,7 +15,7 @@ export default function HeroSection() {
 	}, [])
 
 	return (
-		<section className='relative min-h-screen flex items-center justify-center bg-white px-6 pt-[120px] overflow-hidden'>
+		<section className='relative min-h-screen flex items-center justify-center bg-white px-4 sm:px-6 pt-[100px] sm:pt-[120px] overflow-hidden'>
 			{/* Background Video */}
 			<video
 				autoPlay
@@ -48,7 +48,7 @@ export default function HeroSection() {
 				{/* Badge */}
 				<motion.div
 					variants={fadeUp}
-					className='inline-flex items-center gap-2 px-5 py-2 mb-6 bg-blue-50 border border-blue-100 rounded-full'>
+					className='inline-flex items-center gap-2 px-4 md:px-5 py-2 mb-4 md:mb-6 bg-blue-50 border border-blue-100 rounded-full'>
 					<span className='w-2 h-2 rounded-full bg-blue-600 animate-pulse' />
 					<span className='text-blue-700 text-sm font-medium'>
 						India's Most Affordable Skill Training
@@ -69,7 +69,7 @@ export default function HeroSection() {
 				{/* Subtext */}
 				<motion.p
 					variants={fadeUp}
-					className='text-lg text-gray-200 max-w-2xl mx-auto mt-6 mb-10'>
+					className='text-base md:text-lg text-gray-200 max-w-2xl mx-auto mt-4 md:mt-6 mb-8 md:mb-10 px-4 md:px-0'>
 					Y4U Ultimate trains youth in Industrial Skills, IT, Tourism, Digital
 					Marketing, Real Estate, and Manpower development—taught by real
 					industry professionals.
@@ -78,15 +78,15 @@ export default function HeroSection() {
 				{/* Buttons */}
 				<motion.div
 					variants={fadeUp}
-					className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
+					className='flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center px-4 md:px-0'>
 					<Link
 						href='/contact'
-						className='inline-flex items-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-full font-medium hover:bg-blue-700 transition'>
+						className='inline-flex items-center gap-3 bg-blue-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-medium hover:bg-blue-700 transition text-sm md:text-base'>
 						Start Training
 						<ArrowRight size={18} />
 					</Link>
 
-					<button className='inline-flex items-center gap-3 px-8 py-4 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm hover:bg-white/20 transition text-white'>
+					<button className='inline-flex items-center gap-3 px-6 md:px-8 py-3 md:py-4 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm hover:bg-white/20 transition text-white text-sm md:text-base'>
 						<span className='w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center'>
 							<Play
 								size={16}
@@ -100,7 +100,7 @@ export default function HeroSection() {
 				{/* Stats */}
 				<motion.div
 					variants={fadeUp}
-					className='grid grid-cols-2 md:grid-cols-4 gap-10 mt-20 pt-10 border-t border-white/20'>
+					className='grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 mt-12 md:mt-20 pt-8 md:pt-10 border-t border-white/20'>
 					{[
 						{value: '15+', label: 'Years of Experience'},
 						{value: '20,000+', label: 'Students Trained'},
@@ -110,8 +110,12 @@ export default function HeroSection() {
 						<div
 							key={i}
 							className='text-center'>
-							<div className='text-4xl font-bold text-white'>{s.value}</div>
-							<div className='text-gray-200 text-sm'>{s.label}</div>
+							<div className='text-2xl md:text-4xl font-bold text-white'>
+								{s.value}
+							</div>
+							<div className='text-gray-200 text-xs md:text-sm mt-1'>
+								{s.label}
+							</div>
 						</div>
 					))}
 				</motion.div>
