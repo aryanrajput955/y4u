@@ -2,37 +2,15 @@
 
 export default function Loader() {
   return (
-    <div className="loader" style={{ display: "flex", margin: "0.25em 0" }}>
-      
-      {/* Hidden SVG defs */}
-      <svg height="0" width="0" viewBox="0 0 64 64" className="absolute">
+    <div className="loader" style={{ display: "flex", margin: "0.25em 0", gap: "0.5em" }}>
+      {/* Y */}
+      <svg fill="none" viewBox="0 0 64 64" height="64" width="64" className="inline-block">
         <defs>
           <linearGradient id="b" x1="0" y1="62" x2="0" y2="2" gradientUnits="userSpaceOnUse">
             <stop stopColor="#973BED" />
             <stop stopColor="#007CFF" offset="1" />
           </linearGradient>
-
-          <linearGradient id="c" x1="0" y1="64" x2="0" y2="0" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#FFC800" />
-            <stop stopColor="#F0F" offset="1" />
-            <animateTransform
-              attributeName="gradientTransform"
-              type="rotate"
-              dur="8s"
-              repeatCount="indefinite"
-              values="0 32 32;-270 32 32;-540 32 32;-810 32 32;-1080 32 32"
-            />
-          </linearGradient>
-
-          <linearGradient id="d" x1="0" y1="62" x2="0" y2="2" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#00E0ED" />
-            <stop stopColor="#00DA72" offset="1" />
-          </linearGradient>
         </defs>
-      </svg>
-
-      {/* Y */}
-      <svg fill="none" viewBox="0 0 64 64" height="64" width="64" className="inline-block">
         <path
           stroke="url(#b)"
           strokeWidth="8"
@@ -46,6 +24,12 @@ export default function Loader() {
 
       {/* 4 */}
       <svg fill="none" viewBox="0 0 64 64" height="64" width="64" className="inline-block">
+        <defs>
+          <linearGradient id="c" x1="0" y1="64" x2="0" y2="0" gradientUnits="userSpaceOnUse">
+            <stop stopColor="#FFC800" />
+            <stop stopColor="#F0F" offset="1" />
+          </linearGradient>
+        </defs>
         <path
           stroke="url(#c)"
           strokeWidth="10"
@@ -57,10 +41,14 @@ export default function Loader() {
         />
       </svg>
 
-      <div style={{ width: "0.5em" }} />
-
       {/* U */}
       <svg fill="none" viewBox="0 0 64 64" height="64" width="64" className="inline-block">
+        <defs>
+          <linearGradient id="d" x1="0" y1="62" x2="0" y2="2" gradientUnits="userSpaceOnUse">
+            <stop stopColor="#00E0ED" />
+            <stop stopColor="#00DA72" offset="1" />
+          </linearGradient>
+        </defs>
         <path
           stroke="url(#d)"
           strokeWidth="8"
