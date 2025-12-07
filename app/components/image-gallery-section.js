@@ -6,43 +6,18 @@ export default function ImageGallerySection() {
 	const [selectedImage, setSelectedImage] = useState(null)
 
 	const galleryImages = [
-		{
-			id: 1,
-			url: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80',
-			title: 'Industrial Training',
-			category: 'Manufacturing',
-		},
-		{
-			id: 2,
-			url: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80',
-			title: 'Hotel Management',
-			category: 'Tourism',
-		},
-		{
-			id: 3,
-			url: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80',
-			title: 'Digital Marketing',
-			category: 'IT Services',
-		},
-		{
-			id: 4,
-			url: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80',
-			title: 'Student Training',
-			category: 'Education',
-		},
-		{
-			id: 5,
-			url: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80',
-			title: 'Team Collaboration',
-			category: 'Workshop',
-		},
-		{
-			id: 6,
-			url: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80',
-			title: 'Professional Development',
-			category: 'Training',
-		},
-	]
+  // STUDENTS (3)
+  { id: 1, url: "/t1.jpg", title: "Practical Training", category: "Student Training" },
+  { id: 2, url: "/t3.jpg", title: "Hands-on Workshop Session", category: "Student Training" },
+  { id: 3, url: "/t2.jpg", title: "Classroom + Lab Learning", category: "Student Training" },
+
+  // PARTNER COMPANIES (2)
+  { id: 4, url: "/c1.jpg", title: "pharmaceutical Company ", category: "Partner Company" },
+  { id: 5, url: "/c2.jpg", title: "Manufacturing Partner Unit", category: "Partner Company" },
+
+  // INDUSTRY / MACHINERY (1)
+  { id: 6, url: "/c3.jpg", title: "Steel Company", category: "partner company" },
+]
 
 	return (
 		<div className='bg-gray-50 py-16 px-4'>

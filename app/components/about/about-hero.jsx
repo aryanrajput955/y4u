@@ -28,15 +28,14 @@ export default function AboutHero() {
           <div className="relative animate-fade-in-up animation-delay-400">
             <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden">
               <Image
-                src="https://images.pexels.com/photos/10039997/pexels-photo-10039997.jpeg"
+                src="/about.jpg"
                 alt="Industrial Training Workshop"
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
             </div>
             <div className="absolute -bottom-6 -left-6 bg-card border border-border rounded-xl p-6 shadow-2xl">
-              <div className="text-4xl font-bold text-primary">15+</div>
+              <div className="text-4xl font-bold text-primary">6+</div>
               <div className="text-muted-foreground text-sm">Years of Excellence</div>
             </div>
           </div>

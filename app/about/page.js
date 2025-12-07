@@ -3,7 +3,7 @@ import AboutHero from "../components/about/about-hero"
 import MissionVision from "../components/about/mission-vision"
 import TeamSection from "../components/about/team-section"
 import Timeline from "../components/about/timeline"
-
+import AboutCertifications from "../components/about/certifications"
 export const metadata = {
   title: "About Us | Y4U Ultimate Industrial Training",
   description:
@@ -17,6 +17,7 @@ export default function AboutPage() {
       <main>
         <AboutHero />
         <MissionVision />
+        <AboutCertifications />
         <Timeline />
         <TeamSection />
       </main>
