@@ -1,0 +1,16 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Disallow admin or private paths (if any)
+# Disallow: /admin/
+# Disallow: /api/
+
+# Allow search engine crawlers to access all public content
+Allow: /about
+Allow: /services
+Allow: /contact
+Allow: /blogs
+
+# Sitemap location
+Sitemap: https://www.y4uultimate.com/sitemap.xml

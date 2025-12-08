@@ -2,6 +2,53 @@ import Image from 'next/image'
 import Link from 'next/link'
 import {ArrowLeft, Clock, Users, Award, CheckCircle2} from 'lucide-react'
 
+export const metadata = {
+	title: 'IT & Industrial Automation Training | PLC, SCADA, CNC - Y4U Ultimate',
+	description:
+		'Advanced IT services and industrial automation training. Learn PLC programming, SCADA systems, CNC operations, robotics, and industrial testing with certification and job placement.',
+	keywords: [
+		'industrial PLC training',
+		'industrial SCADA training',
+		'industrial CNC training',
+		'industrial robotics training',
+		'industrial testing training',
+		'industrial automation training',
+		'industrial equipment training',
+		'industrial machinery training',
+		'industrial production training',
+		'industrial machine operator training',
+	].join(', '),
+	openGraph: {
+		title:
+			'IT & Industrial Automation Training | PLC, SCADA, CNC - Y4U Ultimate',
+		description:
+			'Advanced IT services and industrial automation training. Learn PLC programming, SCADA systems, CNC operations, robotics with certification.',
+		url: 'https://www.y4uultimate.com/services/it-services',
+		siteName: 'Y4U Ultimate Industrial Training',
+		images: [
+			{
+				url: '/og-image.png',
+				width: 1200,
+				height: 630,
+				alt: 'Y4U Ultimate IT Services & Automation Training',
+			},
+		],
+		locale: 'en_IN',
+		type: 'website',
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title:
+			'IT & Industrial Automation Training | PLC, SCADA, CNC - Y4U Ultimate',
+		description:
+			'Advanced IT services and industrial automation training. Learn PLC programming, SCADA systems, CNC operations.',
+		images: ['/og-image.png'],
+	},
+	alternates: {
+		canonical: 'https://www.y4uultimate.com/services/it-services',
+	},
+}
+
 export default function ITServicesPage() {
 	return (
 		<main className='min-h-screen bg-background'>

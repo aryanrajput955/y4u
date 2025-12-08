@@ -7,6 +7,7 @@ import Header from './components/header'
 import Footer from './components/footer'
 import Loader from './components/loader'
 import PageWrapper from './components/pagewrapper'
+import SEOHead from './components/seo-head'
 
 import {useEffect, useState} from 'react'
 import {useRouter} from 'next/navigation'
@@ -23,13 +24,11 @@ export default function RootLayout({children}) {
 	const [loading, setLoading] = useState(true) // initial splash loader
 	const [routeLoading, setRouteLoading] = useState(false) // loader on navigation
 
-	// 1️⃣ Initial splash loader (first load only)
 	useEffect(() => {
 		const timer = setTimeout(() => setLoading(false), 1500)
 		return () => clearTimeout(timer)
 	}, [])
 
-	// 2️⃣ Navigation loader (route changes)
 	useEffect(() => {
 		const handleStart = () => setRouteLoading(true)
 		const handleEnd = () => setRouteLoading(false)
@@ -49,6 +48,7 @@ export default function RootLayout({children}) {
 		<html
 			lang='en'
 			className='scroll-smooth'>
+			<SEOHead />
 			<body
 				className={`${inter.className} ${jetbrainsMono.variable} font-sans antialiased`}>
 				{/* Global Loader (initial + route changes) */}

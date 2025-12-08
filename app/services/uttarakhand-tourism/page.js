@@ -2,6 +2,51 @@ import Image from 'next/image'
 import Link from 'next/link'
 import {ArrowLeft, Clock, Users, Award, CheckCircle2} from 'lucide-react'
 
+export const metadata = {
+	title:
+		'Uttarakhand Industrial Tourism | Plant Visits & Training - Y4U Ultimate',
+	description:
+		'Industrial tourism in Uttarakhand. Educational plant visits, manufacturing facility tours, hands-on industrial training experiences, and skill development programs in the hills.',
+	keywords: [
+		'industrial tourism',
+		'industrial plant visits',
+		'industrial manufacturing training',
+		'industrial production training',
+		'uttarakhand industrial training',
+		'industrial facility tours',
+		'industrial training near me',
+	].join(', '),
+	openGraph: {
+		title:
+			'Uttarakhand Industrial Tourism | Plant Visits & Training - Y4U Ultimate',
+		description:
+			'Industrial tourism in Uttarakhand. Educational plant visits, manufacturing facility tours, and hands-on training experiences.',
+		url: 'https://www.y4uultimate.com/services/uttarakhand-tourism',
+		siteName: 'Y4U Ultimate Industrial Training',
+		images: [
+			{
+				url: '/og-image.png',
+				width: 1200,
+				height: 630,
+				alt: 'Y4U Ultimate Uttarakhand Industrial Tourism',
+			},
+		],
+		locale: 'en_IN',
+		type: 'website',
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title:
+			'Uttarakhand Industrial Tourism | Plant Visits & Training - Y4U Ultimate',
+		description:
+			'Industrial tourism in Uttarakhand. Educational plant visits and hands-on training experiences.',
+		images: ['/og-image.png'],
+	},
+	alternates: {
+		canonical: 'https://www.y4uultimate.com/services/uttarakhand-tourism',
+	},
+}
+
 export default function UttarakhandTourismPage() {
 	return (
 		<main className='min-h-screen bg-background'>

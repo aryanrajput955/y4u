@@ -2,6 +2,55 @@ import Image from 'next/image'
 import Link from 'next/link'
 import {ArrowLeft, Clock, Users, Award, CheckCircle2} from 'lucide-react'
 
+export const metadata = {
+	title:
+		'Labour Contractor & Manpower Services | Industrial Staffing - Y4U Ultimate',
+	description:
+		'Professional labour contractor and manpower services for industrial projects. Skilled workforce, machine operators, electricians, fitters, welders, and supervisors with comprehensive training.',
+	keywords: [
+		'industrial manpower',
+		'labour contractor services',
+		'industrial workforce training',
+		'industrial machine operator training',
+		'industrial electrician training',
+		'industrial fitter training',
+		'industrial supervisor training',
+		'industrial welding training',
+		'industrial fabrication training',
+		'industrial vocational training',
+	].join(', '),
+	openGraph: {
+		title:
+			'Labour Contractor & Manpower Services | Industrial Staffing - Y4U Ultimate',
+		description:
+			'Professional labour contractor and manpower services for industrial projects. Skilled workforce with comprehensive training.',
+		url: 'https://www.y4uultimate.com/services/labour-contractor-staff-manpower',
+		siteName: 'Y4U Ultimate Industrial Training',
+		images: [
+			{
+				url: '/og-image.png',
+				width: 1200,
+				height: 630,
+				alt: 'Y4U Ultimate Labour & Manpower Services',
+			},
+		],
+		locale: 'en_IN',
+		type: 'website',
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title:
+			'Labour Contractor & Manpower Services | Industrial Staffing - Y4U Ultimate',
+		description:
+			'Professional labour contractor and manpower services for industrial projects.',
+		images: ['/og-image.png'],
+	},
+	alternates: {
+		canonical:
+			'https://www.y4uultimate.com/services/labour-contractor-staff-manpower',
+	},
+}
+
 export default function LabourContractorPage() {
 	return (
 		<main className='min-h-screen bg-background'>

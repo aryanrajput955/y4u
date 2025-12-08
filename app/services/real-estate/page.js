@@ -2,6 +2,47 @@ import Image from 'next/image'
 import Link from 'next/link'
 import {ArrowLeft, Clock, Users, Award, CheckCircle2} from 'lucide-react'
 
+export const metadata = {
+	title: 'Real Estate & Industrial Infrastructure Services - Y4U Ultimate',
+	description:
+		'Industrial real estate services and infrastructure solutions. Training facilities, industrial plant setups, equipment management, and facility development for industrial training centers.',
+	keywords: [
+		'industrial real estate',
+		'industrial plant training',
+		'industrial infrastructure',
+		'industrial facility management',
+		'training facility development',
+		'industrial property services',
+	].join(', '),
+	openGraph: {
+		title: 'Real Estate & Industrial Infrastructure Services - Y4U Ultimate',
+		description:
+			'Industrial real estate services and infrastructure solutions. Training facilities, industrial plant setups, and equipment management.',
+		url: 'https://www.y4uultimate.com/services/real-estate',
+		siteName: 'Y4U Ultimate Industrial Training',
+		images: [
+			{
+				url: '/og-image.png',
+				width: 1200,
+				height: 630,
+				alt: 'Y4U Ultimate Real Estate Services',
+			},
+		],
+		locale: 'en_IN',
+		type: 'website',
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title: 'Real Estate & Industrial Infrastructure Services - Y4U Ultimate',
+		description:
+			'Industrial real estate services and infrastructure solutions.',
+		images: ['/og-image.png'],
+	},
+	alternates: {
+		canonical: 'https://www.y4uultimate.com/services/real-estate',
+	},
+}
+
 export default function RealEstatePage() {
 	return (
 		<main className='min-h-screen bg-background'>

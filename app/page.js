@@ -12,6 +12,7 @@ import CertificationSection from './components/certification-section'
 import WhoWeHelpSection from './components/whowehelp-section'
 import FreeConsultationSection from './components/freeconsultation-section'
 import Certificate2 from './components/certificate2'
+
 export default function Home() {
 	return (
 		<>

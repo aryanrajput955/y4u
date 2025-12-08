@@ -137,7 +137,7 @@ export default function FreeConsultationSection() {
 										onChange={handleChange}
 										required
 										className='w-full px-4 py-3 bg-white border border-gray-300 rounded-xl text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all'
-										placeholder='+91 98765 43210'
+										placeholder='+91 82189 11085'
 									/>
 								</div>
 

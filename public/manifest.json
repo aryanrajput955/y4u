@@ -1,0 +1,26 @@
+{
+	"name": "Y4U Ultimate Industrial Training",
+	"short_name": "Y4U Ultimate",
+	"description": "Leading industrial training institute in India offering hands-on training, apprenticeships, and job-oriented courses",
+	"start_url": "/",
+	"display": "standalone",
+	"background_color": "#ffffff",
+	"theme_color": "#0066cc",
+	"orientation": "portrait-primary",
+	"icons": [
+		{
+			"src": "/logo-nobg.png",
+			"sizes": "192x192",
+			"type": "image/png",
+			"purpose": "any maskable"
+		},
+		{
+			"src": "/logo-nobg.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "any maskable"
+		}
+	],
+	"categories": ["education", "training", "business"],
+	"lang": "en-IN"
+}

@@ -2,6 +2,57 @@ import Image from 'next/image'
 import Link from 'next/link'
 import {ArrowLeft, Clock, Users, Award, CheckCircle2} from 'lucide-react'
 
+export const metadata = {
+	title:
+		'Industrial Training Programs | Mechanical, Electrical, Civil - Y4U Ultimate',
+	description:
+		'Complete industrial training programs with hands-on experience in mechanical, electrical, civil engineering. ITI diploma courses with certification, job placement, and practical training in India.',
+	keywords: [
+		'industrial training program',
+		'industrial training mechanical',
+		'industrial training electrical',
+		'industrial training civil',
+		'industrial training ITI',
+		'industrial training diploma',
+		'industrial training syllabus',
+		'industrial training certificate',
+		'industrial hands-on training',
+		'industrial practical training',
+		'industrial training fresher',
+		'industrial apprenticeship',
+		'industrial training placement',
+	].join(', '),
+	openGraph: {
+		title:
+			'Industrial Training Programs | Mechanical, Electrical, Civil - Y4U Ultimate',
+		description:
+			'Complete industrial training programs with hands-on experience in mechanical, electrical, civil engineering. ITI diploma courses with certification and job placement.',
+		url: 'https://www.y4uultimate.com/services/industrial-training',
+		siteName: 'Y4U Ultimate Industrial Training',
+		images: [
+			{
+				url: '/og-image.png',
+				width: 1200,
+				height: 630,
+				alt: 'Y4U Ultimate Industrial Training Programs',
+			},
+		],
+		locale: 'en_IN',
+		type: 'website',
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title:
+			'Industrial Training Programs | Mechanical, Electrical, Civil - Y4U Ultimate',
+		description:
+			'Complete industrial training programs with hands-on experience in mechanical, electrical, civil engineering.',
+		images: ['/og-image.png'],
+	},
+	alternates: {
+		canonical: 'https://www.y4uultimate.com/services/industrial-training',
+	},
+}
+
 export default function IndustrialTrainingPage() {
 	return (
 		<main className='min-h-screen bg-background'>
