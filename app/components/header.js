@@ -21,6 +21,7 @@ export default function Header() {
 		{href: '/', label: 'Home'},
 		{href: '/about', label: 'About'},
 		{href: '/services', label: 'Services'},
+		{href: '/blogs', label: 'Blog'},
 		{href: '/contact', label: 'Contact'},
 	]
 
@@ -28,7 +29,7 @@ export default function Header() {
 		<header
 			className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
 				isScrolled
-					? 'bg-background/95 backdrop-blur-md border-b border-border'
+					? 'bg-white/95 backdrop-blur-md border-b border-gray-200'
 					: 'bg-transparent'
 			}`}>
 			<div className='max-w-7xl mx-auto px-6 py-4'>
@@ -52,21 +53,21 @@ export default function Header() {
 								key={link.href}
 								href={link.href}
 								className={`${
-									isScrolled ? 'text-muted-foreground' : 'text-white'
-								} hover:text-primary transition-colors duration-200 text-sm font-medium tracking-wide uppercase`}>
+									isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-blue-600 hover:text-blue-200'
+								} transition-colors duration-200 text-sm font-medium tracking-wide uppercase`}>
 								{link.label}
 							</Link>
 						))}
 						<Link
 							href='/contact'
-							className='bg-primary text-primary-foreground px-5 py-2.5 rounded-full text-sm font-medium hover:bg-primary/90 transition-colors'>
+							className='bg-blue-600 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-blue-700 transition-colors'>
 							Get Started
 						</Link>
 					</div>
 
 					{/* Mobile Menu Button */}
 					<button
-						className='md:hidden text-foreground'
+						className={`md:hidden ${isScrolled ? 'text-gray-900' : 'text-blue-600'} transition-colors`}
 						onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
 						aria-label='Toggle menu'>
 						{isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -75,20 +76,20 @@ export default function Header() {
 
 				{/* Mobile Navigation */}
 				{isMobileMenuOpen && (
-					<div className='md:hidden mt-4 pb-4 border-t border-border pt-4'>
+					<div className={`md:hidden mt-4 pb-4 border-t ${isScrolled ? 'border-gray-200' : 'border-white/20'} pt-4`}>
 						<div className='flex flex-col gap-4'>
 							{navLinks.map((link) => (
 								<Link
 									key={link.href}
 									href={link.href}
-									className='text-muted-foreground hover:text-primary transition-colors text-sm font-medium'
+									className={`${isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-200'} transition-colors text-sm font-medium`}
 									onClick={() => setIsMobileMenuOpen(false)}>
 									{link.label}
 								</Link>
 							))}
 							<Link
 								href='/contact'
-								className='bg-primary text-primary-foreground px-5 py-2.5 rounded-full text-sm font-medium text-center hover:bg-primary/90 transition-colors'
+								className='bg-blue-600 text-white px-5 py-2.5 rounded-full text-sm font-medium text-center hover:bg-blue-700 transition-colors'
 								onClick={() => setIsMobileMenuOpen(false)}>
 								Get Started
 							</Link>

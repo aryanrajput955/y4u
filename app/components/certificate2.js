@@ -25,21 +25,21 @@ export default function LandingTrustCertificates() {
   const [activeDoc, setActiveDoc] = useState(null)
 
   return (
-   <section className="py-28 bg-gradient-to-br from-blue-50 via-background to-blue-100/40">
+   <section className="py-24 bg-blue-50/30">
 
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}
         <div className="text-center mb-16">
-          <span className="text-primary text-sm font-semibold uppercase tracking-wider">
+          <span className="text-blue-600 text-sm font-semibold uppercase">
             Trust & Recognition
           </span>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mt-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3">
             Our Certifications & Authorizations
           </h2>
 
-          <p className="text-muted-foreground max-w-2xl mx-auto mt-4">
+          <p className="text-gray-600 max-w-2xl mx-auto mt-4">
             We operate under private ISO-certified quality standards and official
             authorization as a vocational & I.T. training center.
           </p>
@@ -52,25 +52,23 @@ export default function LandingTrustCertificates() {
             return (
               <div
                 key={index}
-                className="bg-card border border-border rounded-3xl p-8 shadow-sm hover:shadow-xl transition"
+                className="group p-8 rounded-2xl bg-white border border-blue-200 hover:border-blue-500 transition shadow-sm hover:shadow-lg"
               >
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
-                    <Icon className="w-7 h-7 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-foreground">
-                    {doc.title}
-                  </h3>
+                <div className="w-14 h-14 rounded-xl bg-blue-100 flex items-center justify-center mb-6">
+                  <Icon className="w-7 h-7 text-blue-600" />
                 </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-6">
+                  {doc.title}
+                </h3>
 
-                <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                <p className="text-gray-600 text-sm leading-relaxed mb-6">
                   {doc.description}
                 </p>
 
                 {/* Image Preview */}
                 <div
                   onClick={() => setActiveDoc(doc)}
-                  className="relative w-full h-[260px] rounded-2xl overflow-hidden bg-background border border-border cursor-pointer group"
+                  className="relative w-full h-[260px] rounded-2xl overflow-hidden bg-gray-50 border border-blue-200 cursor-pointer group"
                 >
                   <Image
                     src={doc.image}
@@ -90,7 +88,7 @@ export default function LandingTrustCertificates() {
         </div>
 
         {/* Small Legal Note */}
-        <div className="mt-10 text-center text-xs text-muted-foreground max-w-3xl mx-auto">
+        <div className="mt-10 text-center text-xs text-gray-600 max-w-3xl mx-auto">
           Both documents shown are issued by private organizations and do not constitute
           recognition by the Government of India or statutory education authorities.
         </div>
@@ -101,17 +99,17 @@ export default function LandingTrustCertificates() {
         <div className="fixed inset-0 z-[999] bg-black/80 backdrop-blur-sm flex items-center justify-center px-4">
           <button
             onClick={() => setActiveDoc(null)}
-            className="absolute top-6 right-6 bg-card border border-border rounded-full p-2 hover:bg-primary hover:text-primary-foreground transition"
+            className="absolute top-6 right-6 bg-white border border-gray-300 rounded-full p-2 hover:bg-blue-600 hover:text-white transition"
           >
             <X size={20} />
           </button>
 
-          <div className="bg-card rounded-3xl p-6 max-w-5xl w-full shadow-2xl">
-            <h3 className="text-xl font-semibold text-foreground mb-4 text-center">
+          <div className="bg-white rounded-2xl p-6 max-w-5xl w-full shadow-2xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">
               {activeDoc.title}
             </h3>
 
-            <div className="relative w-full h-[75vh] rounded-xl overflow-hidden bg-background">
+            <div className="relative w-full h-[75vh] rounded-xl overflow-hidden bg-gray-50">
               <Image
                 src={activeDoc.image}
                 alt={activeDoc.title}
