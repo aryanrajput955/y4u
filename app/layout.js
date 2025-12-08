@@ -19,7 +19,7 @@ export const metadata = {
 		template: '%s | Y4U Ultimate',
 	},
 	description:
-		"Join India's premier industrial training institute offering hands-on training in mechanical, electrical, civil, CNC, PLC, SCADA, welding, and more. Get certified with job placement assistance.",
+		"Join India's premium industrial training institute offering hands-on training in mechanical, electrical, civil, CNC, PLC, SCADA, welding, and more. Get certified with job placement assistance.",
 	keywords: [
 		'industrial training india',
 		'industrial training institute',
@@ -41,7 +41,7 @@ export const metadata = {
 		title:
 			'Y4U Ultimate Industrial Training | Best Industrial Training Institute in India',
 		description:
-			"Join India's premier industrial training institute offering hands-on training in mechanical, electrical, civil, CNC, PLC, SCADA, welding, and more.",
+			"Join India's premium industrial training institute offering hands-on training in mechanical, electrical, civil, CNC, PLC, SCADA, welding, and more.",
 		images: [
 			{
 				url: '/og-image.png',
@@ -58,7 +58,7 @@ export const metadata = {
 		title:
 			'Y4U Ultimate Industrial Training | Best Industrial Training Institute in India',
 		description:
-			"Join India's premier industrial training institute offering hands-on training in mechanical, electrical, civil, CNC, PLC, SCADA, welding, and more.",
+			"Join India's premium industrial training institute offering hands-on training in mechanical, electrical, civil, CNC, PLC, SCADA, welding, and more.",
 		images: ['/og-image.png'],
 	},
 	robots: {

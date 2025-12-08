@@ -7,7 +7,7 @@ import AboutCertifications from '../components/about/certifications'
 export const metadata = {
 	title: 'About Us | Y4U Ultimate Industrial Training Institute India',
 	description:
-		"Learn about Y4U Ultimate's mission to empower skills and build futures. Premier industrial training institute offering certified courses, practical training, and 100% placement assistance across India.",
+		"Learn about Y4U Ultimate's mission to empower skills and build futures. Premium industrial training institute offering certified courses, practical training, and 100% placement assistance across India.",
 	keywords: [
 		'about industrial training',
 		'industrial training institute india',
@@ -21,7 +21,7 @@ export const metadata = {
 	openGraph: {
 		title: 'About Us | Y4U Ultimate Industrial Training Institute India',
 		description:
-			"Learn about Y4U Ultimate's mission to empower skills and build futures. Premier industrial training institute offering certified courses, practical training, and 100% placement assistance across India.",
+			"Learn about Y4U Ultimate's mission to empower skills and build futures. Premium industrial training institute offering certified courses, practical training, and 100% placement assistance across India.",
 		url: 'https://www.y4uultimate.com/about',
 		siteName: 'Y4U Ultimate Industrial Training',
 		images: [
@@ -39,7 +39,7 @@ export const metadata = {
 		card: 'summary_large_image',
 		title: 'About Us | Y4U Ultimate Industrial Training Institute India',
 		description:
-			"Learn about Y4U Ultimate's mission to empower skills and build futures. Premier industrial training institute offering certified courses, practical training, and 100% placement assistance across India.",
+			"Learn about Y4U Ultimate's mission to empower skills and build futures. Premium industrial training institute offering certified courses, practical training, and 100% placement assistance across India.",
 		images: ['/og-image.png'],
 	},
 	alternates: {
