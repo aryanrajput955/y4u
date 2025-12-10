@@ -92,7 +92,7 @@ export default function RootLayout({children}) {
 				/>
 				<link
 					rel='apple-touch-icon'
-					href='/logo-nobg.png'
+					href='/logo.png'
 				/>
 				<link
 					rel='manifest'

@@ -49,7 +49,7 @@ export default function HeroSection() {
 				<motion.div
 					variants={fadeUp}
 					className='inline-flex items-center gap-2 px-4 md:px-5 py-2 mb-4 md:mb-6 bg-blue-50 border border-blue-100 rounded-full'>
-					<span className='w-2 h-2 rounded-full bg-blue-600 animate-pulse' />
+					<span className='w-2 h-2 rounded-full bg-green-500 animate-pulse' />
 					<span className='text-blue-700 text-sm font-medium'>
 						India's Most Affordable Skill Training
 					</span>
@@ -87,10 +87,10 @@ export default function HeroSection() {
 					</Link>
 
 					<button className='inline-flex items-center gap-3 px-6 md:px-8 py-3 md:py-4 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm hover:bg-white/20 transition text-white text-sm md:text-base'>
-						<span className='w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center'>
+						<span className='w-10 h-10 rounded-full bg-green-100 flex items-center justify-center'>
 							<Play
 								size={16}
-								className='text-blue-600'
+								className='text-green-600'
 							/>
 						</span>
 						Watch Introduction

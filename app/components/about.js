@@ -58,7 +58,11 @@ export default function AboutUsSection() {
 								<li
 									key={index}
 									className='flex gap-3 items-start'>
-									<CheckCircle className='text-blue-600 h-5 w-5 shrink-0' />
+									<CheckCircle
+										className={`${
+											index % 2 === 0 ? 'text-blue-600' : 'text-green-600'
+										} h-5 w-5 shrink-0`}
+									/>
 									{item}
 								</li>
 							))}

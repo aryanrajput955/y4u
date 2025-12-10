@@ -194,7 +194,7 @@ export default function SEOHead() {
 			/>
 			<link
 				rel='apple-touch-icon'
-				href='/logo-nobg.png'
+				href='/logo.png'
 			/>
 			<link
 				rel='manifest'

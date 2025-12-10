@@ -6,18 +6,48 @@ export default function ImageGallerySection() {
 	const [selectedImage, setSelectedImage] = useState(null)
 
 	const galleryImages = [
-  // STUDENTS (3)
-  { id: 1, url: "/t1.jpg", title: "Practical Training", category: "Student Training" },
-  { id: 2, url: "/t3.jpg", title: "Hands-on Workshop Session", category: "Student Training" },
-  { id: 3, url: "/t2.jpg", title: "Classroom + Lab Learning", category: "Student Training" },
+		// STUDENTS (3)
+		{
+			id: 1,
+			url: '/t1.jpg',
+			title: 'Practical Training',
+			category: 'Student Training',
+		},
+		{
+			id: 2,
+			url: '/t3.jpg',
+			title: 'Hands-on Workshop Session',
+			category: 'Student Training',
+		},
+		{
+			id: 3,
+			url: '/t2.jpg',
+			title: 'Classroom + Lab Learning',
+			category: 'Student Training',
+		},
 
-  // PARTNER COMPANIES (2)
-  { id: 4, url: "/c1.jpg", title: "pharmaceutical Company ", category: "Partner Company" },
-  { id: 5, url: "/c2.jpg", title: "Manufacturing Partner Unit", category: "Partner Company" },
+		// PARTNER COMPANIES (2)
+		{
+			id: 4,
+			url: '/c1.jpg',
+			title: 'pharmaceutical Company ',
+			category: 'Partner Company',
+		},
+		{
+			id: 5,
+			url: '/c2.jpg',
+			title: 'Manufacturing Partner Unit',
+			category: 'Partner Company',
+		},
 
-  // INDUSTRY / MACHINERY (1)
-  { id: 6, url: "/c3.jpg", title: "Steel Company", category: "partner company" },
-]
+		// INDUSTRY / MACHINERY (1)
+		{
+			id: 6,
+			url: '/c3.jpg',
+			title: 'Steel Company',
+			category: 'partner company',
+		},
+	]
 
 	return (
 		<div className='bg-gray-50 py-16 px-4'>
@@ -54,7 +84,10 @@ export default function ImageGallerySection() {
 							{/* Overlay */}
 							<div className='absolute inset-0 bg-linear-to-t from-gray-900 via-gray-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
 								<div className='absolute bottom-0 left-0 right-0 p-6'>
-									<span className='inline-block px-3 py-1 bg-blue-500 text-white text-xs font-semibold rounded-full mb-2'>
+									<span
+										className={`inline-block px-3 py-1 ${
+											image.id % 2 === 0 ? 'bg-green-500' : 'bg-blue-500'
+										} text-white text-xs font-semibold rounded-full mb-2`}>
 										{image.category}
 									</span>
 									<h3 className='text-white font-bold text-xl'>
@@ -117,7 +150,10 @@ export default function ImageGallerySection() {
 							className='w-full h-auto rounded-lg shadow-2xl'
 						/>
 						<div className='mt-4 text-center'>
-							<span className='inline-block px-3 py-1 bg-blue-500 text-white text-xs font-semibold rounded-full mb-2'>
+							<span
+								className={`inline-block px-3 py-1 ${
+									selectedImage.id % 2 === 0 ? 'bg-green-500' : 'bg-blue-500'
+								} text-white text-xs font-semibold rounded-full mb-2`}>
 								{selectedImage.category}
 							</span>
 							<h3 className='text-white font-bold text-2xl'>

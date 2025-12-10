@@ -34,15 +34,18 @@ export default function CertificationSection() {
 							<div
 								key={i}
 								className='flex gap-3 items-start'>
-								<BadgeCheck className='text-primary h-6 w-6 shrink-0 mt-1' />
+								<BadgeCheck
+									className={`${
+										i % 2 === 0 ? 'text-blue-600' : 'text-green-600'
+									} h-6 w-6 shrink-0 mt-1`}
+								/>
 								<p className='text-muted-foreground text-base leading-snug'>
 									{item}
 								</p>
 							</div>
 						))}
 					</div>
-				</div>
-
+				</div>{' '}
 				{/* RIGHT SIDE LOGO */}
 				<div className='flex justify-center'>
 					<div className='bg-card border border-border rounded-3xl shadow-lg p-10 w-[350px] h-[350px] flex items-center justify-center'>

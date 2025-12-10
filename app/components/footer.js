@@ -19,7 +19,7 @@ export default function Footer() {
 					<div className='space-y-4'>
 						<div className='flex items-center gap-3'>
 							<Image
-								src='/logo-nobg.png'
+								src='/logo.png'
 								alt='Y4U Ultimate Logo'
 								width={65}
 								height={55}

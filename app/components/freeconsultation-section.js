@@ -87,7 +87,7 @@ export default function FreeConsultationSection() {
 					<div className='bg-white border border-blue-200 rounded-2xl p-8 shadow-sm'>
 						{isSubmitted ? (
 							<div className='text-center'>
-								<CheckCircle className='w-16 h-16 text-blue-600 mx-auto mb-4' />
+								<CheckCircle className='w-16 h-16 text-green-600 mx-auto mb-4' />
 								<h3 className='text-xl font-semibold text-gray-900 mb-2'>
 									Request Submitted!
 								</h3>

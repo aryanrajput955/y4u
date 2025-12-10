@@ -34,8 +34,8 @@ export default function VisionSection() {
 
 					{/* Mission Card */}
 					<div className='bg-card border border-border rounded-3xl p-10 shadow-md hover:shadow-xl transition-all duration-300 text-left'>
-						<div className='w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6'>
-							<Rocket className='w-8 h-8 text-primary' />
+						<div className='w-14 h-14 rounded-xl bg-green-100 flex items-center justify-center mb-6'>
+							<Rocket className='w-8 h-8 text-green-600' />
 						</div>
 
 						<h3 className='text-2xl md:text-3xl font-semibold text-foreground mb-4'>

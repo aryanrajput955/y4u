@@ -17,6 +17,7 @@ export default function ServicesSection() {
 				'Manufacturing Processes',
 			],
 			color: 'bg-blue-50',
+			iconColor: 'text-blue-600',
 		},
 		{
 			icon: <Globe className='w-8 h-8' />,
@@ -31,7 +32,8 @@ export default function ServicesSection() {
 				'Hospitality Services',
 				'Resort Operations',
 			],
-			color: 'bg-blue-50',
+			color: 'bg-green-50',
+			iconColor: 'text-green-600',
 		},
 		{
 			icon: <Briefcase className='w-8 h-8' />,
@@ -46,7 +48,8 @@ export default function ServicesSection() {
 				'Mobile App Dev',
 				'E-commerce Development',
 			],
-			color: 'bg-blue-50',
+			color: 'bg-gradient-to-br from-blue-50 to-green-50',
+			iconColor: 'text-blue-600',
 		},
 	]
 
@@ -55,14 +58,17 @@ export default function ServicesSection() {
 			<div className='max-w-7xl mx-auto'>
 				<div className='text-center mb-12'>
 					<p className='text-blue-600 font-semibold mb-2 uppercase tracking-wide text-sm'>
-						Our Services
+						Training & Learning Opportunities
 					</p>
-					<h2 className='text-4xl font-bold text-gray-900 mb-4'>
-						Comprehensive Training Solutions
-					</h2>
+					<h1 className='text-4xl md:text-5xl font-bold text-foreground mt-4 mb-6 leading-tight text-balance animate-fade-in-up'>
+						Comprehensive{' '}
+						<span className='text-primary'>Training Programs</span>
+					</h1>
 					<p className='text-gray-600 max-w-2xl mx-auto'>
-						Explore our range of professional training programs designed to
-						prepare you for real-world careers.
+						Empower your career with our specialized training programs in CNC
+						machining, automation, and industrial skills. Transform your
+						potential into expertise through hands-on learning and
+						industry-focused education.
 					</p>
 				</div>
 
@@ -81,7 +87,7 @@ export default function ServicesSection() {
 
 							<div className='p-8'>
 								<div
-									className={`${service.color} w-16 h-16 rounded-xl flex items-center justify-center text-blue-600 mb-6`}>
+									className={`${service.color} w-16 h-16 rounded-xl flex items-center justify-center ${service.iconColor} mb-6`}>
 									{service.icon}
 								</div>
 
@@ -96,7 +102,7 @@ export default function ServicesSection() {
 										<div
 											key={idx}
 											className='flex items-start'>
-											<div className='w-1.5 h-1.5 rounded-full bg-blue-600 mt-2 mr-3 shrink-0'></div>
+											<div className='w-1.5 h-1.5 rounded-full bg-green-600 mt-2 mr-3 shrink-0'></div>
 											<span className='text-sm text-gray-700'>
 												{subService}
 											</span>
@@ -104,9 +110,9 @@ export default function ServicesSection() {
 									))}
 								</div>
 
-								<button className='text-blue-600 font-semibold text-sm hover:gap-2 transition-all flex items-center gap-1 group'>
+								<button className='text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600 font-semibold text-sm hover:gap-2 transition-all flex items-center gap-1 group'>
 									Learn More
-									<ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform' />
+									<ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform text-green-600' />
 								</button>
 							</div>
 						</div>
@@ -116,7 +122,7 @@ export default function ServicesSection() {
 				<div className='text-center'>
 					<a
 						href='/services'
-						className='inline-flex items-center gap-2 bg-blue-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-600 transition-colors'>
+						className='inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-green-500 text-white px-8 py-3 rounded-full font-semibold hover:from-blue-600 hover:to-green-600 transition-colors'>
 						View All Services
 						<ArrowRight className='w-5 h-5' />
 					</a>

@@ -23,6 +23,11 @@
   --secondary: #E7A921; /* Gold */
   --secondary-foreground: #1a1a1a;
 
+  /* Green Secondary Theme */
+  --green-primary: #10B981; /* Emerald Green */
+  --green-light: #D1FAE5; /* Light Green */
+  --green-dark: #047857; /* Dark Green */
+
   /* Accents & Muted */
   --accent: #8BD8E0; /* Aqua Light */
   --accent-foreground: #1a1a1a;

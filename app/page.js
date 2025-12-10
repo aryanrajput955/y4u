@@ -17,23 +17,19 @@ export default function Home() {
 	return (
 		<>
 			<main>
-<HeroSection />                
-<FreeConsultationSection />   
-<CertificationSection />      
-<Certificate2 />              
-
-<WhoWeHelpSection />          
-<FeaturesSection />           
-<ServicesSection />         
-
-<SliderSection />             
-<TestimonialsSection />      
-
-<AboutUsSection />            
-<VisionSection />             
-
-<ImageGallerySection />      
-<CTASection />  
+				<HeroSection />
+				<ServicesSection />
+				<FreeConsultationSection />
+				<CertificationSection />
+				<Certificate2 />
+				<WhoWeHelpSection />
+				<FeaturesSection />
+				<SliderSection />
+				<TestimonialsSection />
+				<AboutUsSection />
+				<VisionSection />
+				<ImageGallerySection />
+				<CTASection />
 			</main>
 		</>
 	)
