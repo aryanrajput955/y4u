@@ -12,7 +12,7 @@ import {
 
 export default function Footer() {
 	return (
-		<footer className='bg-card border-t border-border'>
+		<footer className='bg-gradient-to-br from-blue-50 to-cyan-50 border-t border-blue-200'>
 			<div className='max-w-7xl mx-auto px-6 py-16'>
 				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12'>
 					{/* Brand */}
@@ -26,7 +26,7 @@ export default function Footer() {
 								className='rounded-lg'
 							/>
 						</div>
-						<p className='text-muted-foreground text-sm leading-relaxed'>
+						<p className='text-blue-800 text-sm leading-relaxed'>
 							Empowering Skills, Building Futures. Superior skill-based learning
 							for future-ready professionals.
 						</p>
@@ -34,7 +34,7 @@ export default function Footer() {
 
 					{/* Quick Links */}
 					<div>
-						<h4 className='text-foreground font-semibold mb-4 text-sm uppercase tracking-wider'>
+						<h4 className='text-blue-900 font-semibold mb-4 text-sm uppercase tracking-wider'>
 							Quick Links
 						</h4>
 						<ul className='space-y-3'>
@@ -42,7 +42,7 @@ export default function Footer() {
 								<li key={link}>
 									<Link
 										href={link === 'Home' ? '/' : `/${link.toLowerCase()}`}
-										className='text-muted-foreground hover:text-primary transition-colors text-sm'>
+										className='text-blue-700 hover:text-cyan-600 transition-colors text-sm font-medium'>
 										{link}
 									</Link>
 								</li>
@@ -52,7 +52,7 @@ export default function Footer() {
 
 					{/* Services */}
 					<div>
-						<h4 className='text-foreground font-semibold mb-4 text-sm uppercase tracking-wider'>
+						<h4 className='text-blue-900 font-semibold mb-4 text-sm uppercase tracking-wider'>
 							Our Services
 						</h4>
 						<ul className='space-y-3'>
@@ -63,7 +63,7 @@ export default function Footer() {
 								'Certification Courses',
 							].map((service) => (
 								<li key={service}>
-									<span className='text-muted-foreground text-sm'>
+									<span className='text-blue-700 text-sm'>
 										{service}
 									</span>
 								</li>
@@ -73,28 +73,28 @@ export default function Footer() {
 
 					{/* Contact */}
 					<div>
-						<h4 className='text-foreground font-semibold mb-4 text-sm uppercase tracking-wider'>
+						<h4 className='text-blue-900 font-semibold mb-4 text-sm uppercase tracking-wider'>
 							Contact Us
 						</h4>
 						<ul className='space-y-3'>
-							<li className='flex items-center gap-3 text-muted-foreground text-sm'>
+							<li className='flex items-center gap-3 text-blue-700 text-sm'>
 								<Mail
 									size={16}
-									className='text-primary'
+									className='text-cyan-600'
 								/>
 								yogeshggangwar@gmail.com
 							</li>
-							<li className='flex items-center gap-3 text-muted-foreground text-sm'>
+							<li className='flex items-center gap-3 text-blue-700 text-sm'>
 								<Phone
 									size={16}
-									className='text-primary'
+									className='text-cyan-600'
 								/>
 								+91 82189 11085
 							</li>
-							<li className='flex items-start gap-3 text-muted-foreground text-sm'>
+							<li className='flex items-start gap-3 text-blue-700 text-sm'>
 								<MapPin
-									size={16}
-									className='text-primary mt-0.5'
+									size={24}
+									className='text-cyan-600 mt-0.5'
 								/>
 								184, Subhash Nagar, Jwalapur, Haridwar, Uttarakhand - 249407
 							</li>
@@ -105,10 +105,10 @@ export default function Footer() {
 								target='_blank'
 								rel='noopener noreferrer'
 								aria-label='LinkedIn'
-								className='w-9 h-9 rounded-full bg-muted flex items-center justify-center hover:bg-primary transition-colors group'>
+								className='w-9 h-9 rounded-full bg-blue-100 flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 group'>
 								<Linkedin
 									size={16}
-									className='text-muted-foreground group-hover:text-primary-foreground'
+									className='text-blue-700 group-hover:text-white transition-colors'
 								/>
 							</a>
 							<a
@@ -116,10 +116,10 @@ export default function Footer() {
 								target='_blank'
 								rel='noopener noreferrer'
 								aria-label='Facebook'
-								className='w-9 h-9 rounded-full bg-muted flex items-center justify-center hover:bg-primary transition-colors group'>
+								className='w-9 h-9 rounded-full bg-blue-100 flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 group'>
 								<Facebook
 									size={16}
-									className='text-muted-foreground group-hover:text-primary-foreground'
+									className='text-blue-700 group-hover:text-white transition-colors'
 								/>
 							</a>
 							<a
@@ -127,10 +127,10 @@ export default function Footer() {
 								target='_blank'
 								rel='noopener noreferrer'
 								aria-label='Instagram'
-								className='w-9 h-9 rounded-full bg-muted flex items-center justify-center hover:bg-primary transition-colors group'>
+								className='w-9 h-9 rounded-full bg-blue-100 flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 group'>
 								<Instagram
 									size={16}
-									className='text-muted-foreground group-hover:text-primary-foreground'
+									className='text-blue-700 group-hover:text-white transition-colors'
 								/>
 							</a>
 							<a
@@ -138,10 +138,10 @@ export default function Footer() {
 								target='_blank'
 								rel='noopener noreferrer'
 								aria-label='YouTube'
-								className='w-9 h-9 rounded-full bg-muted flex items-center justify-center hover:bg-primary transition-colors group'>
+								className='w-9 h-9 rounded-full bg-blue-100 flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 group'>
 								<Youtube
 									size={16}
-									className='text-muted-foreground group-hover:text-primary-foreground'
+									className='text-blue-700 group-hover:text-white transition-colors'
 								/>
 							</a>
 							<a
@@ -149,13 +149,13 @@ export default function Footer() {
 								target='_blank'
 								rel='noopener noreferrer'
 								aria-label='X (Twitter)'
-								className='w-9 h-9 rounded-full bg-muted flex items-center justify-center hover:bg-primary transition-colors group'>
+								className='w-9 h-9 rounded-full bg-blue-100 flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 group'>
 								<svg
 									width='16'
 									height='16'
 									viewBox='0 0 24 24'
 									fill='currentColor'
-									className='text-muted-foreground group-hover:text-primary-foreground'>
+									className='text-blue-700 group-hover:text-white transition-colors'>
 									<path d='M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z' />
 								</svg>
 							</a>
@@ -163,20 +163,20 @@ export default function Footer() {
 					</div>
 				</div>
 
-				<div className='border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4'>
-					<p className='text-muted-foreground text-sm'>
+				<div className='border-t border-blue-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4'>
+					<p className='text-blue-700 text-sm'>
 						© 2025 Y4U Ultimate Industrial Training Solutions. All rights
 						reserved.
 					</p>
 					<div className='flex gap-6'>
 						<Link
 							href='/privacy-policy'
-							className='text-muted-foreground hover:text-primary text-sm transition-colors'>
+							className='text-blue-700 hover:text-cyan-600 text-sm transition-colors font-medium'>
 							Privacy Policy
 						</Link>
 						<Link
 							href='/terms-and-conditions'
-							className='text-muted-foreground hover:text-primary text-sm transition-colors'>
+							className='text-blue-700 hover:text-cyan-600 text-sm transition-colors font-medium'>
 							Terms of Service
 						</Link>
 					</div>

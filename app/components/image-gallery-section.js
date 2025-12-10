@@ -101,7 +101,7 @@ export default function ImageGallerySection() {
 
 				{/* View All Button */}
 				<div className='text-center mt-12'>
-					<button className='inline-flex items-center px-8 py-3 bg-blue-500 text-white font-semibold rounded-full hover:bg-blue-600 transition-colors duration-300 shadow-md hover:shadow-lg'>
+					<button className='inline-flex items-center px-8 py-3 bg-green-600 text-white font-semibold rounded-full hover:bg-green-700 cursor-pointer transition-colors duration-300 shadow-md hover:shadow-lg'>
 						View All Photos
 						<svg
 							className='w-5 h-5 ml-2'

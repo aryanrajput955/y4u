@@ -61,7 +61,7 @@ export default function FreeConsultationSection() {
 								Free Consultation
 							</span>
 							<h2 className='text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-6 leading-tight'>
-								Get Expert Advice <span className='text-blue-600'>Today</span>
+								Get Expert Advice <span className='text-green-600'>Today</span>
 							</h2>
 							<p className='text-gray-600 text-lg leading-relaxed'>
 								Ready to take the next step in your career? Our experts are here
@@ -179,7 +179,7 @@ export default function FreeConsultationSection() {
 								<button
 									type='submit'
 									disabled={isLoading}
-									className='group inline-flex items-center justify-center gap-2 w-full bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-all text-base disabled:opacity-50 disabled:cursor-not-allowed'>
+									className='group inline-flex items-center justify-center gap-2 w-full cursor-pointer bg-green-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-green-700 transition-all text-base disabled:opacity-50 disabled:cursor-not-allowed'>
 									{isLoading ? 'Submitting...' : 'Request Free Consultation'}
 									<Send
 										size={18}
