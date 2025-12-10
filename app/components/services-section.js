@@ -110,7 +110,7 @@ export default function ServicesSection() {
 									))}
 								</div>
 
-								<button className='text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600 font-semibold text-sm hover:gap-2 transition-all flex items-center gap-1 group'>
+								<button className='text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-green-600 font-semibold text-sm hover:gap-2 transition-all flex items-center gap-1 group'>
 									Learn More
 									<ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform text-green-600' />
 								</button>
@@ -122,7 +122,7 @@ export default function ServicesSection() {
 				<div className='text-center'>
 					<a
 						href='/services'
-						className='inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-green-500 text-white px-8 py-3 rounded-full font-semibold hover:from-blue-600 hover:to-green-600 transition-colors'>
+						className='inline-flex items-center gap-2 bg-linear-to-r from-blue-500 to-green-500 text-white px-8 py-3 rounded-full font-semibold hover:from-blue-600 hover:to-green-600 transition-colors'>
 						View All Services
 						<ArrowRight className='w-5 h-5' />
 					</a>

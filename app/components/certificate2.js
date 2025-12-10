@@ -106,7 +106,7 @@ export default function LandingTrustCertificates() {
 
 			{/* FULL SCREEN PREVIEW MODAL */}
 			{activeDoc && (
-				<div className='fixed inset-0 z-[999] bg-black/80 backdrop-blur-sm flex items-center justify-center px-4'>
+				<div className='fixed inset-0 z-999 bg-black/80 backdrop-blur-sm flex items-center justify-center px-4'>
 					<button
 						onClick={() => setActiveDoc(null)}
 						className='absolute top-6 right-6 bg-white border border-gray-300 rounded-full p-2 hover:bg-blue-600 hover:text-white transition'>

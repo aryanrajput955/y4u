@@ -65,7 +65,7 @@ export default function Header() {
 									{/* underline */}
 									<span
 										className={`
-											absolute left-0 -bottom-1 h-[2px] bg-[#76e0ff] rounded-full transition-all duration-300
+											absolute left-0 -bottom-1 h-0.5 bg-[#76e0ff] rounded-full transition-all duration-300
 											${isActive ? 'w-full' : 'w-0 group-hover:w-full'}
 										`}></span>
 								</Link>
