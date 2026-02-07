@@ -1,28 +1,79 @@
 "use client"
 
 import Image from "next/image"
-import { Linkedin } from "lucide-react"
 
-const team = [
+const teamMembers = [
   {
-    name: "Dr. Vikram Singh",
-    role: "Founder & CEO",
-    image: "https://images.pexels.com/photos/938639/pexels-photo-938639.jpeg",
+      id: 1,
+      name: 'Mr Yogesh Gangwar',
+      designation: 'CEO',
+      image: '/team/img1.jpg',
   },
   {
-    name: "Anita Desai",
-    role: "Director of Training",
-    image: "https://images.pexels.com/photos/18360995/pexels-photo-18360995.jpeg",
+      id: 9,
+      name: 'Geeta Gangwar',
+      designation: 'CEO',
+      image: '/team/img9.jpeg',
   },
   {
-    name: "Suresh Menon",
-    role: "Head of Operations",
-    image: "https://images.pexels.com/photos/15889538/pexels-photo-15889538.jpeg",
+      id: 5,
+      name: 'Mr Manik Bansal',
+      designation: 'IT Consultant',
+      image: '/team/img5.jpg',
   },
   {
-    name: "Meera Kapoor",
-    role: "Industry Relations",
-    image: "https://images.pexels.com/photos/34943067/pexels-photo-34943067.png",
+      id: 2,
+      name: 'Mr Suresh Mohan',
+      designation: 'Marketing Executive',
+      image: '/team/img2.jpg',
+  },
+  {
+      id: 3,
+      name: 'Mr Gopal Chaturvedi',
+      designation: 'Legal Consultant',
+      image: '/team/img3.jpg',
+  },
+  {
+      id: 4,
+      name: 'Aryan Rajput',
+      designation: 'Full Stack Developer',
+      image: '/team/img4.jpg',
+  },
+  {
+      id: 6,
+      name: 'Mr Vineet',
+      designation: 'Marketing head Pan India',
+      image: '/team/img6.jpeg',
+  },
+  {
+      id: 7,
+      name: 'V4U GROUP UK INDIA',
+      designation: 'Professional recruitment team',
+      image: '/team/img7.JPG',
+  },
+  {
+      id: 8,
+      name: 'Mr Amardeep Robin',
+      designation: 'Office management head',
+      image: '/team/img8.jpg',
+  },
+  {
+      id: 10,
+      name: 'Ishant Gangwar',
+      designation: 'IT department cyber security',
+      image: '/team/img10.JPG',
+  },
+  {
+      id: 11,
+      name: 'Mr Dhanesh Chandra Tiwari',
+      designation: 'Office coordinator',
+      image: '/team/img11.jpeg',
+  },
+  {
+      id: 12,
+      name: 'Shivam Sharma',
+      designation: 'B2B industrial marketing officer',
+      image: '/team/img12.JPG',
   },
 ]
 
@@ -41,19 +92,13 @@ export default function TeamSection() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {team.map((member, index) => (
-            <div key={index} className="group text-center">
+          {teamMembers.map((member) => (
+            <div key={member.id} className="group text-center">
               <div className="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary/20 group-hover:border-primary/50 transition-colors">
-                <Image src={member.image || "/placeholder.svg"} alt={member.name} fill className="object-cover" />
+                <Image src={member.image} alt={member.name} fill className="object-cover" />
               </div>
               <h3 className="text-lg font-semibold text-foreground">{member.name}</h3>
-              <p className="text-primary text-sm mb-3">{member.role}</p>
-              <a
-                href="#"
-                className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-muted hover:bg-primary transition-colors group/link"
-              >
-                <Linkedin size={16} className="text-muted-foreground group-hover/link:text-primary-foreground" />
-              </a>
+              <p className="text-primary text-sm mb-3">{member.designation}</p>
             </div>
           ))}
         </div>
