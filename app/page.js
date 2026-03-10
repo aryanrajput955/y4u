@@ -8,7 +8,7 @@ import VisionSection from './components/vision'
 import ServicesSection from './components/services-section'
 import SliderSection from './components/slider-section'
 import ImageGallerySection from './components/image-gallery-section'
-import CertificationSection from './components/certification-section'
+// import CertificationSection from './components/certification-section'
 import WhoWeHelpSection from './components/whowehelp-section'
 import FreeConsultationSection from './components/freeconsultation-section'
 import Certificate2 from './components/certificate2'
@@ -20,7 +20,7 @@ export default function Home() {
 				<HeroSection />
 				<ServicesSection />
 				<FreeConsultationSection />
-				<CertificationSection />
+				{/* <CertificationSection /> */}
 				<Certificate2 />
 				<WhoWeHelpSection />
 				<FeaturesSection />
