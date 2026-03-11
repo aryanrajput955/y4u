@@ -1,8 +1,8 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
-import { Clock, Users, Award, ArrowRight, Monitor, Building, HardHat, Map, Briefcase, GraduationCap } from 'lucide-react'
+import { ArrowRight, Monitor, Building, HardHat, Map, Briefcase, GraduationCap, SlidersHorizontal, ChevronDown } from 'lucide-react'
 import Link from 'next/link'
 
 const categories = [
@@ -341,21 +341,75 @@ const servicesData = [
 
 export default function ServicesList() {
 	const [activeCategory, setActiveCategory] = useState('all')
+	const [isFilterOpen, setIsFilterOpen] = useState(false)
+	const [mobileShowAll, setMobileShowAll] = useState(false)
+	const filterRef = useRef(null)
+
+	useEffect(() => {
+		function handleClickOutside(event) {
+			if (filterRef.current && !filterRef.current.contains(event.target)) {
+				setIsFilterOpen(false)
+			}
+		}
+		document.addEventListener('mousedown', handleClickOutside)
+		return () => document.removeEventListener('mousedown', handleClickOutside)
+	}, [])
+
+	const handleCategoryChange = (categoryId) => {
+		setActiveCategory(categoryId)
+		setIsFilterOpen(false)
+		setMobileShowAll(false)
+	}
 
 	const filteredServices = servicesData.filter(
 		(service) => activeCategory === 'all' || service.categoryId === activeCategory
 	)
 
+	const activeCategoryName = categories.find((c) => c.id === activeCategory)?.name || 'All Services'
+
 	return (
-		<section className='py-20 bg-background'>
+		<section className='py-10 md:py-20 bg-background'>
 			<div className='max-w-7xl mx-auto px-6'>
-				
-				{/* Category Filter */}
-				<div className='flex flex-wrap gap-3 justify-center mb-16'>
+
+				{/* Mobile Filter - Single button with dropdown */}
+				<div className='md:hidden flex justify-start mb-10 relative' ref={filterRef}>
+					<button
+						onClick={() => setIsFilterOpen(!isFilterOpen)}
+						className='flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium bg-primary text-primary-foreground shadow-md'
+					>
+						<SlidersHorizontal size={16} />
+						<span>{activeCategoryName}</span>
+						<ChevronDown
+							size={16}
+							className={`transition-transform duration-200 ${isFilterOpen ? 'rotate-180' : ''}`}
+						/>
+					</button>
+
+					{isFilterOpen && (
+						<div className='absolute top-full mt-2 bg-card border border-border rounded-2xl shadow-xl z-50 min-w-[220px] overflow-hidden'>
+							{categories.map((category) => (
+								<button
+									key={category.id}
+									onClick={() => handleCategoryChange(category.id)}
+									className={`w-full text-left px-5 py-3 text-sm font-medium transition-colors ${
+										activeCategory === category.id
+											? 'bg-primary text-primary-foreground'
+											: 'text-foreground hover:bg-muted'
+									}`}
+								>
+									{category.name}
+								</button>
+							))}
+						</div>
+					)}
+				</div>
+
+				{/* Desktop Filter - Original buttons */}
+				<div className='hidden md:flex flex-wrap gap-3 justify-center mb-16'>
 					{categories.map((category) => (
 						<button
 							key={category.id}
-							onClick={() => setActiveCategory(category.id)}
+							onClick={() => handleCategoryChange(category.id)}
 							className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
 								activeCategory === category.id
 									? 'bg-primary text-primary-foreground shadow-md scale-105'
@@ -368,14 +422,16 @@ export default function ServicesList() {
 				</div>
 
 				{/* Services Grid */}
-				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-					{filteredServices.map((service) => (
+				<div className='grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8'>
+					{filteredServices.map((service, index) => (
 						<Link
 							key={service.id}
 							href='#'
-							className='group flex flex-col h-full bg-card rounded-3xl border border-border/50 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-primary/5 hover:border-primary/30 transition-all duration-500 transform hover:-translate-y-2'
+							className={`group flex-col h-full bg-card rounded-2xl md:rounded-3xl border border-border/50 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-primary/5 hover:border-primary/30 transition-all duration-500 transform hover:-translate-y-2 ${
+								!mobileShowAll && index >= 6 ? 'hidden md:flex' : 'flex'
+							}`}
 						>
-							<div className='relative h-64 w-full overflow-hidden'>
+							<div className='relative h-32 md:h-64 w-full overflow-hidden'>
 								<Image
 									src={service.image || '/placeholder.svg'}
 									alt={service.title}
@@ -383,23 +439,23 @@ export default function ServicesList() {
 									className='object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out'
 								/>
 								<div className='absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent opacity-80 group-hover:opacity-50 transition-opacity duration-500' />
-								
+
 								{/* Floating Icon */}
-								<div className='absolute top-6 right-6 bg-background/90 backdrop-blur-md p-3.5 rounded-2xl text-primary shadow-lg group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300'>
+								<div className='hidden md:block absolute top-6 right-6 bg-background/90 backdrop-blur-md p-3.5 rounded-2xl text-primary shadow-lg group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300'>
 									{service.icon}
 								</div>
 							</div>
 
-							<div className='p-8 flex flex-col grow relative bg-card z-10'>
-								<h3 className='text-2xl font-bold text-foreground mb-4 leading-tight group-hover:text-primary transition-colors duration-300'>
+							<div className='p-3 md:p-8 flex flex-col grow relative bg-card z-10'>
+								<h3 className='text-xs md:text-2xl font-bold text-foreground mb-1 md:mb-4 leading-tight group-hover:text-primary transition-colors duration-300 line-clamp-2'>
 									{service.title}
 								</h3>
-								
-								<p className='text-muted-foreground leading-relaxed mb-8 grow text-sm md:text-base'>
+
+								<p className='hidden md:block text-muted-foreground leading-relaxed mb-8 grow text-sm md:text-base'>
 									{service.description}
 								</p>
 
-								<div className='flex flex-wrap gap-2 mb-8'>
+								<div className='hidden md:flex flex-wrap gap-2 mb-8'>
 									{service.features.map((feature, idx) => (
 										<span
 											key={idx}
@@ -411,15 +467,30 @@ export default function ServicesList() {
 								</div>
 
 								<div className='mt-auto flex items-center justify-between font-semibold text-foreground group-hover:text-primary transition-colors'>
-									<span className='text-[15px]'>Explore Service</span>
-									<span className='bg-muted p-2.5 rounded-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-500 shadow-sm'>
-										<ArrowRight size={18} className='transform group-hover:translate-x-0.5 transition-transform' />
+									<span className='hidden md:block text-[15px]'>Explore Service</span>
+									<span className='bg-muted p-1.5 md:p-2.5 rounded-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-500 shadow-sm'>
+										<ArrowRight size={14} className='md:hidden transform group-hover:translate-x-0.5 transition-transform' />
+										<ArrowRight size={18} className='hidden md:block transform group-hover:translate-x-0.5 transition-transform' />
 									</span>
 								</div>
 							</div>
 						</Link>
 					))}
 				</div>
+
+				{/* Mobile View More / Show Less Button */}
+				{filteredServices.length > 6 && (
+					<div className='md:hidden flex justify-center mt-10'>
+						<button
+							onClick={() => setMobileShowAll(!mobileShowAll)}
+							className='px-8 py-3 rounded-full text-sm font-semibold bg-primary text-primary-foreground shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300'
+						>
+							{mobileShowAll
+								? 'Show Less'
+								: `View More (${filteredServices.length - 6} more)`}
+						</button>
+					</div>
+				)}
 
 				{filteredServices.length === 0 && (
 					<div className='text-center py-20 text-muted-foreground'>

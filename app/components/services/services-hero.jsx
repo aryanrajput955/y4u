@@ -2,7 +2,7 @@
 
 export default function ServicesHero() {
 	return (
-		<section className='pt-32 pb-16 bg-background relative overflow-hidden'>
+		<section className='pt-30 md:pt-32 pb-8 md:pb-16 bg-background relative overflow-hidden'>
 			{/* Background Pattern */}
 			<div className='absolute inset-0 opacity-5 grid-pattern' />
 

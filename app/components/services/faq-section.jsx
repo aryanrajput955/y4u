@@ -35,9 +35,9 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(0)
 
   return (
-    <section className="py-24 bg-card">
+    <section className="py-12 md:py-24 bg-card">
       <div className="max-w-3xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 md:mb-16">
           <span className="text-primary text-sm font-medium uppercase tracking-wider">FAQ</span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-3 mb-4 text-balance">
             Frequently Asked Questions
