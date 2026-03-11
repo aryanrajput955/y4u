@@ -1,7 +1,7 @@
 import {NextResponse} from 'next/server'
 import {Resend} from 'resend'
 import dbConnect from '@/lib/mongodb'
-import Contact from '@/models/Contact'
+import Contact from '@/lib/models/Contact'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
