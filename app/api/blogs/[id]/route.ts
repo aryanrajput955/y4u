@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import connectDB from '@/app/lib/mongodb';
-import Blog from '@/app/lib/models/Blog';
+import connectDB from '@/lib/mongodb';
+import Blog from '@/lib/models/Blog';
 
 // PUT - Update a blog
 export async function PUT(
