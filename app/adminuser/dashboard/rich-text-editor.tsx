@@ -59,7 +59,7 @@ export default function RichTextEditor({ value, onChange }: RichTextEditorProps)
 	// Sync external value changes (e.g. when editing a blog)
 	useEffect(() => {
 		if (editor && value !== editor.getHTML()) {
-			editor.commands.setContent(value, false)
+			editor.commands.setContent(value)
 		}
 	}, [value, editor])
 
