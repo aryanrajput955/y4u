@@ -1,11 +1,11 @@
-import {Inter, JetBrains_Mono} from 'next/font/google'
+import { Inter, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
-import {siteConfig} from '@/lib/seo-config'
+import { siteConfig } from './lib/seo-config'
 import Script from 'next/script'
 
 import ClientLayout from './client-layout'
 
-const inter = Inter({subsets: ['latin']})
+const inter = Inter({ subsets: ['latin'] })
 const jetbrainsMono = JetBrains_Mono({
 	subsets: ['latin'],
 	variable: '--font-mono',
@@ -30,7 +30,7 @@ export const metadata = {
 		'industrial hands-on training',
 		'industrial job-oriented training',
 	],
-	authors: [{name: 'Y4U Ultimate Industrial Training'}],
+	authors: [{ name: 'Y4U Ultimate Industrial Training' }],
 	creator: 'Y4U Ultimate',
 	publisher: 'Y4U Ultimate Industrial Training',
 	openGraph: {
@@ -80,7 +80,7 @@ export const metadata = {
 	},
 }
 
-export default function RootLayout({children}) {
+export default function RootLayout({ children }) {
 	return (
 		<html
 			lang='en'
